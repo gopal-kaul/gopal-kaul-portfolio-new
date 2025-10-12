@@ -1,16 +1,42 @@
 ---
-
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/Navbar';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Experience from '../components/Experience';
+import Socials from '../components/Socials';
+import Contact from '../components/Contact';
+import FloatingSocials from '../components/FloatingSocials';
+import ScrollIndicator from '../components/ScrollIndicator';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout title="Gopal Kaul" description="Full Stack Developer">
+  <ScrollIndicator client:load />
+  <Navbar client:load />
+  <FloatingSocials client:load />
+  
+  <main>
+    <div id="home">
+      <Hero client:load />
+    </div>
+    
+    <About client:visible />
+    
+    <Experience client:visible />
+    
+    <Socials client:visible />
+    
+    <Contact client:visible />
+  </main>
+
+  <footer class="bg-black border-t border-zinc-800 py-8">
+    <div class="max-w-7xl mx-auto px-4 text-center">
+      <p class="text-gray-500 font-mono text-sm">
+        Built with <span class="text-ducati">❤</span> using Astro, React & Tailwind
+      </p>
+      <p class="text-gray-600 font-mono text-xs mt-2">
+        © 2024 Your Name. All rights reserved.
+      </p>
+    </div>
+  </footer>
+</MainLayout>
