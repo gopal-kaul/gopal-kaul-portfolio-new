@@ -1,0 +1,103 @@
+---
+import '../styles/global.css';
+import "@fontsource/jetbrains-mono";
+
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { 
+  title = 'Gopal Kaul', 
+  description = 'Full Stack Developer' 
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Basic SEO -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="keywords" content="Gopal Kaul, Full Stack Developer, Web Developer, React, Node.js, Astro, JavaScript, Frontend, Backend" />
+    <meta name="author" content="Gopal Kaul" />
+    <link rel="canonical" href="https://gopal-kaul.is-a.dev/" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Browser and Theme -->
+    <meta name="theme-color" content="#000000" />
+    <meta name="color-scheme" content="dark light" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://gopal-kaul.is-a.dev/" />
+    <meta property="og:image" content="https://gopal-kaul.is-a.dev/me.webp" />
+    <meta property="og:site_name" content="Gopal Kaul" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="https://gopal-kaul.is-a.dev/me.webp" />
+    <meta name="twitter:creator" content="@kaulmegops" />
+
+    <!-- Structured Data (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Gopal Kaul",
+      "url": "https://gopal-kaul.is-a.dev",
+      "sameAs": [
+        "https://github.com/gopal-kaul",
+        "https://linkedin.com/in/gopal-kaul",
+        "https://twitter.com/kaulmegops"
+      ],
+      "jobTitle": "Full Stack Developer",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Oracle"
+      }
+    }
+    </script>
+  </head>
+  <body class="bg-black text-white font-sans antialiased">
+    <slot />
+
+    <style is:global>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      overflow-x: hidden;
+    }
+
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #000;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #D40000;
+      border-radius: 5px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a80000;
+    }
+    </style>
+  </body>
+</html>
