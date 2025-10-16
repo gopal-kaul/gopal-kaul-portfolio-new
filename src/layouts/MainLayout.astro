@@ -18,7 +18,8 @@ const {
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
 
     <!-- Basic SEO -->
     <title>{title}</title>
@@ -26,7 +27,9 @@ const {
     <meta name="keywords" content="Gopal Kaul, Full Stack Developer, Web Developer, React, Node.js, Astro, JavaScript, Frontend, Backend" />
     <meta name="author" content="Gopal Kaul" />
     <link rel="canonical" href="https://gopal-kaul.is-a.dev/" />
-    <meta name="robots" content="index, follow" />
+    <link rel="alternate" href="https://gopal-kaul.is-a.dev/" hreflang="en" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
 
     <!-- Browser and Theme -->
     <meta name="theme-color" content="#000000" />
@@ -42,6 +45,9 @@ const {
     <meta property="og:url" content="https://gopal-kaul.is-a.dev/" />
     <meta property="og:image" content="https://gopal-kaul.is-a.dev/me.webp" />
     <meta property="og:site_name" content="Gopal Kaul" />
+    <meta property="og:locale" content="en_IN" />
+    <meta property="og:image:alt" content="Portrait of Gopal Kaul — Full Stack Developer" />
+
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -49,6 +55,9 @@ const {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content="https://gopal-kaul.is-a.dev/me.webp" />
     <meta name="twitter:creator" content="@kaulmegops" />
+    <meta name="twitter:site" content="@kaulmegops" />
+    <meta name="twitter:image:alt" content="Portrait of Gopal Kaul — Full Stack Developer" />
+
 
     <!-- Structured Data (Schema.org) -->
     <script type="application/ld+json">
@@ -69,6 +78,20 @@ const {
       }
     }
     </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "url": "https://gopal-kaul.is-a.dev/",
+  "name": "Gopal Kaul - Full Stack Developer",
+  "description": "Portfolio of Gopal Kaul, a Full Stack Developer specializing in React, Node.js, Astro, and Tailwind CSS.",
+  "publisher": {
+    "@type": "Person",
+    "name": "Gopal Kaul"
+  }
+}
+</script>
+
   </head>
   <body class="bg-black text-white font-sans antialiased">
     <slot />
