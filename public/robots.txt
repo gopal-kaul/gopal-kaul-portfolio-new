@@ -1,0 +1,15 @@
+# robots.txt for https://gopal-kaul.is-a.dev
+User-agent: *
+Allow: /
+
+# Disallow server or private directories (if any)
+Disallow: /api/
+Disallow: /admin/
+Disallow: /drafts/
+
+# Sitemap reference
+Sitemap: https://gopal-kaul.is-a.dev/sitemap.xml
+
+# Helpful metadata
+Host: gopal-kaul.is-a.dev
+
