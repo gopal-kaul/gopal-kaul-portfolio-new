@@ -68,7 +68,7 @@ export default function Contact() {
             variants={fadeUp}
           >
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:gopalkaul5@gmail.com"
               className="group relative px-10 py-5 bg-ducati text-white font-mono font-semibold text-lg rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-ducati/50"
               onMouseEnter={() => setIsHovered(true)}
               onMouseLeave={() => setIsHovered(false)}
@@ -90,10 +90,10 @@ export default function Contact() {
             </a>
 
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:gopalkaul5@gmail.com"
               className="px-10 py-5 border-2 border-ducati text-ducati font-mono font-semibold text-lg rounded-lg hover:bg-ducati hover:text-white transition-all duration-300 hover:scale-105"
             >
-              your.email@example.com
+              gopalkaul5@gmail.com
             </a>
           </motion.div>
 

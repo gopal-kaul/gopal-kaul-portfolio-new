@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 
 export default function About() {
@@ -26,7 +26,7 @@ export default function About() {
     visible: { opacity: 1, x: 0, transition: { duration: 0.8, delay: 0.2 } },
   };
 
-  const techVariants = {
+  const techVariants: Variants = {
     hidden: { opacity: 0, x: -10 },
     visible: (i) => ({
       opacity: 1,
@@ -63,7 +63,7 @@ export default function About() {
               I'm a passionate developer who loves building things that live on
               the internet. My interest in web development started back in 2020
               when I decided to try creating custom themes — turns out hacking
-              together HTML & CSS taught me a lot!
+              together HTML &amp; CSS taught me a lot!
             </p>
             <p className="text-xl text-gray-300 leading-relaxed mb-6">
               Fast-forward to today, and I've had the privilege of working on
@@ -85,6 +85,8 @@ export default function About() {
                 "Astro",
                 "Tailwind CSS",
                 "PostgreSQL",
+                "Oracle VBCS",
+                "Oracle ADF",
                 "AWS",
               ].map((tech, i) => (
                 <motion.div

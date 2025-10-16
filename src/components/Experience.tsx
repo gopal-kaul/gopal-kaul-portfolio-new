@@ -1,5 +1,5 @@
 "use client";
-import { motion, useInView } from "framer-motion";
+import { motion, useInView, type Variants } from "framer-motion";
 import { useRef } from "react";
 import { Briefcase } from "lucide-react";
 
@@ -9,16 +9,30 @@ const experiences = [
     company: "Oracle India Pvt. Ltd.",
     period: "Oct 2025 - Present",
     description:
-      "Leading development of enterprise-scale applications using React, Node.js, and AWS. Mentoring junior developers and establishing best practices.",
-    technologies: ["React", "TypeScript", "Node.js", "AWS", "PostgreSQL"],
+      "Leading the development of multiple pages and flows, including frontend and backend changes.",
+    technologies: [
+      "Oracle VBCS",
+      "Oracle ADF(Application Development Framework)",
+      "Docker",
+      "SQL",
+      "PLSQL",
+      "Linux",
+    ],
   },
   {
     title: "Applications Developer 2",
     company: "Oracle India Pvt. Ltd.",
     period: "June 2023 - Oct 2025",
     description:
-      "Built and shipped multiple features for a SaaS platform. Improved application performance by 40% through optimization strategies.",
-    technologies: ["Next.js", "Python", "Docker", "MongoDB"],
+      "Worked on multiple enhancements and fixes related to Offers and Employment Core processes for Oracle Fusion - Global Human Resources.",
+    technologies: [
+      "Oracle VBCS",
+      "Oracle ADF(Application Development Framework)",
+      "Docker",
+      "SQL",
+      "PLSQL",
+      "Linux",
+    ],
   },
   {
     title: "Full Stack Web Developer Intern",
@@ -26,23 +40,31 @@ const experiences = [
     period: "Dec 2021 - May 2023",
     description:
       "Developed responsive web applications and implemented pixel-perfect designs. Collaborated with designers to create seamless user experiences.",
-    technologies: ["React", "JavaScript", "CSS", "Figma"],
+    technologies: [
+      "NextJS",
+      "SvelteKit",
+      "TailwindCSS",
+      "NodeJS",
+      "TypeScript",
+      "DynamoDB",
+      "AWS Lambda",
+    ],
   },
   {
     title: "Frontend Developer Intern",
     company: "SkilZen",
-    period: "Jul 2021 - Sept 2021",
+    period: "June 2021 - Sept 2021",
     description:
-      "Developed responsive web applications and implemented pixel-perfect designs. Collaborated with designers to create seamless user experiences.",
-    technologies: ["React", "JavaScript", "CSS", "Figma"],
+      "Started my professional journey building websites and learning modern web technologies. Worked on building a product, CollegeKing, to find colleges for students.",
+    technologies: ["NextJS", "Strapi CMS", "TailwindCSS"],
   },
   {
     title: "Software Developer Intern",
-    company: "SkilZen",
+    company: "Accellor(PopcornApps)",
     period: "Apr 2020 - May 2021",
     description:
-      "Started my professional journey building websites and learning modern web technologies. Contributed to various client projects.",
-    technologies: ["HTML", "CSS", "JavaScript", "WordPress"],
+      "Worked on multiple client projects, making fixes and new enhancements based on business requirement.",
+    technologies: ["SQL", "NodeJS", "HTML/CSS", "React"],
   },
 ];
 
@@ -68,7 +90,7 @@ export default function Experience() {
     },
   };
 
-  const techVariants = {
+  const techVariants: Variants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: (i) => ({
       opacity: 1,

@@ -4,7 +4,7 @@ import { Github, Instagram, Music2 } from "lucide-react";
 const socials = [
   {
     name: "GitHub",
-    url: "https://github.com/yourusername",
+    url: "https://github.com/gopal-kaul",
     icon: Github,
     color: "hover:text-purple-400",
     bgColor: "group-hover:bg-purple-500/10",
@@ -12,7 +12,8 @@ const socials = [
   },
   {
     name: "Spotify",
-    url: "https://open.spotify.com/user/yourusername",
+    url: "https://open.spotify.com/user/1xr1nqgy1t0n47dhj23h1xaev?si=ebc0dbb5c98d43b4",
+
     icon: Music2,
     color: "hover:text-green-400",
     bgColor: "group-hover:bg-green-500/10",
@@ -20,7 +21,7 @@ const socials = [
   },
   {
     name: "Instagram",
-    url: "https://instagram.com/yourusername",
+    url: "https://instagram.com/kaulmegops",
     icon: Instagram,
     color: "hover:text-pink-400",
     bgColor: "group-hover:bg-pink-500/10",

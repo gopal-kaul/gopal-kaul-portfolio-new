@@ -1,12 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
-const roles = [
-  "Full Stack Developer",
-  "UI/UX Designer",
-  "Problem Solver",
-  "Creative Thinker",
-];
+const roles = ["Full Stack Developer", "Problem Solver", "Creative Thinker"];
 
 export default function Hero() {
   const [roleIndex, setRoleIndex] = useState(0);
