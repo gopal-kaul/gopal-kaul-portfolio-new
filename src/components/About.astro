@@ -1,0 +1,77 @@
+---
+import { skills } from '../data/experience';
+---
+
+<section id="about" class="section">
+  <div class="container">
+    <div class="grid items-start gap-12 md:grid-cols-[1.2fr_1fr] md:gap-16">
+      <div>
+        <div class="section-label gsap-fade-up"><span>01 // About</span></div>
+        <h2 class="section-heading gsap-fade-up">A bit about me<span class="text-[var(--accent)]">.</span></h2>
+
+        <div class="flex flex-col gap-7">
+          <p class="gsap-fade-up text-base leading-[1.8] text-[var(--text-secondary)]">
+            I'm a software developer based in Hyderabad, India, with a passion for
+            building things that live on the internet. My journey started back in 2020
+            when I decided to try hacking together HTML & CSS — turns out that
+            sparked something that never stopped.
+          </p>
+          <p class="gsap-fade-up text-base leading-[1.8] text-[var(--text-secondary)]">
+            Today, I work at <span class="font-medium text-[var(--accent)]">Fanatics</span>, building scalable
+            e-commerce experiences with React and Spring Boot. Previously, I spent two+ years
+            at Oracle, shipping features for Fusion HCM and developing AI-powered workflow agents.
+          </p>
+          <p class="gsap-fade-up text-base leading-[1.8] text-[var(--text-secondary)]">
+            When I'm not coding, you'll find me tweaking my
+            <span class="font-medium text-[var(--accent)]">Linux</span> setup, riding my motorcycle,
+            or playing music. I'm a CLI-first kind of developer —
+            <span class="rounded border border-[var(--border)] bg-[var(--bg-surface)] px-1.5 py-0.5 font-mono text-[0.9em] text-[var(--accent-2)]">neovim</span>
+            over everything.
+          </p>
+        </div>
+      </div>
+
+      <div class="gsap-scale-in overflow-hidden rounded-xl border border-[var(--border)] bg-[var(--bg-surface)] font-mono text-[0.8rem]">
+        <div class="flex items-center gap-3 border-b border-[var(--border)] bg-[var(--bg-elevated)] px-4 py-3">
+          <div class="flex gap-1.5">
+            <span class="size-2.5 rounded-full bg-red-500"></span>
+            <span class="size-2.5 rounded-full bg-amber-500"></span>
+            <span class="size-2.5 rounded-full bg-emerald-500"></span>
+          </div>
+          <span class="text-[0.7rem] text-[var(--text-muted)]">~/.config/gopal</span>
+        </div>
+        <div class="p-4 leading-[1.8] text-[var(--text-muted)]">
+          <div class="mb-2 flex gap-2"><span class="font-bold text-[var(--accent)]">$</span><span class="text-[var(--text)]">cat about.json</span></div>
+          <div>
+            <span>&#123;</span><br/>
+            <span class="text-[var(--accent-2)]">&nbsp;&nbsp;"name"</span><span>:</span> <span class="text-[var(--accent)]">"Gopal Kaul"</span><span>,</span><br/>
+            <span class="text-[var(--accent-2)]">&nbsp;&nbsp;"role"</span><span>:</span> <span class="text-[var(--accent)]">"Software Developer"</span><span>,</span><br/>
+            <span class="text-[var(--accent-2)]">&nbsp;&nbsp;"alias"</span><span>:</span> <span class="text-[var(--accent)]">"BL4Z3"</span><span>,</span><br/>
+            <span class="text-[var(--accent-2)]">&nbsp;&nbsp;"os"</span><span>:</span> <span class="text-[var(--accent)]">"Arch Linux btw"</span><span>,</span><br/>
+            <span class="text-[var(--accent-2)]">&nbsp;&nbsp;"editor"</span><span>:</span> <span class="text-[var(--accent)]">"neovim"</span><span>,</span><br/>
+            <span class="text-[var(--accent-2)]">&nbsp;&nbsp;"hobbies"</span><span>:</span> <span>[</span><span class="text-[var(--accent)]">"motorcycles"</span><span>,</span> <span class="text-[var(--accent)]">"music"</span><span>]</span><br/>
+            <span>&#125;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-20">
+      <h3 class="gsap-fade-up mb-8 font-mono text-[0.85rem] uppercase tracking-[0.05em] text-[var(--text-muted)]">Technologies I work with</h3>
+      <div class="flex flex-col gap-12">
+        <div class="gsap-fade-up">
+          <span class="mb-3 block font-mono text-xs uppercase tracking-[0.08em] text-[var(--accent)]">Languages</span>
+          <div class="flex flex-wrap gap-2">{skills.languages.map((skill) => (<span class="tech-badge">{skill}</span>))}</div>
+        </div>
+        <div class="gsap-fade-up">
+          <span class="mb-3 block font-mono text-xs uppercase tracking-[0.08em] text-[var(--accent)]">Frameworks</span>
+          <div class="flex flex-wrap gap-2">{skills.frameworks.map((skill) => (<span class="tech-badge">{skill}</span>))}</div>
+        </div>
+        <div class="gsap-fade-up">
+          <span class="mb-3 block font-mono text-xs uppercase tracking-[0.08em] text-[var(--accent)]">Tools</span>
+          <div class="flex flex-wrap gap-2">{skills.tools.map((skill) => (<span class="tech-badge">{skill}</span>))}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

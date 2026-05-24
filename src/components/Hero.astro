@@ -1,0 +1,208 @@
+---
+---
+
+<section id="hero" class="relative flex min-h-screen overflow-hidden pt-32 sm:pt-28">
+  <div class="container relative w-full">
+    <div class="hero-grid-bg absolute -inset-[10%] opacity-70" id="hero-grid" aria-hidden="true"></div>
+
+    <div class="relative z-[1] grid min-h-[calc(100vh-8rem)] items-center gap-12 lg:grid-cols-[1fr_26rem]">
+      <div class="max-w-3xl">
+        <div class="gsap-fade-up mb-6 flex flex-wrap items-center gap-3 font-mono text-[0.82rem] text-[var(--text-muted)]">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span>~/portfolio</span>
+          <span class="text-[var(--border)]">|</span>
+          <span class="text-[var(--accent)]">main</span>
+          <span class="text-[var(--border)]">|</span>
+          <span>vim: j/k enabled</span>
+        </div>
+
+        <p class="gsap-fade-up mb-4 font-mono text-sm text-[var(--accent)]">
+          <span class="text-[var(--text-muted)]">$</span> whoami
+        </p>
+
+        <h1 class="hero-title gsap-fade-up mb-6 font-heading text-[clamp(3.25rem,8vw,6.25rem)] font-extrabold leading-none text-[var(--text)]">
+          Gopal Kaul<span class="text-[var(--accent)]">.</span>
+        </h1>
+
+        <div class="gsap-fade-up mb-7 flex min-h-10 items-baseline gap-2 font-mono text-[clamp(1.05rem,2.4vw,1.45rem)] text-[var(--text-muted)]">
+          <span class="text-[var(--accent)]">:</span>
+          <span id="typed-text" class="text-[var(--accent-2)]"></span>
+          <span class="typed-cursor text-[var(--accent)]">_</span>
+        </div>
+
+        <p class="gsap-fade-up mb-9 max-w-[34rem] text-[1.05rem] leading-[1.75] text-[var(--text-secondary)]">
+          Software developer building fast web interfaces and pragmatic backend flows.
+          Currently shipping e-commerce systems at <span class="font-medium text-[var(--accent)]">Fanatics</span>.
+        </p>
+
+        <div class="gsap-fade-up mb-9 flex flex-wrap gap-2 font-mono text-[0.74rem] text-[var(--text-muted)]">
+          <span class="key-chip">React</span>
+          <span class="key-chip">TypeScript</span>
+          <span class="key-chip">Spring Boot</span>
+          <span class="key-chip">Linux</span>
+          <span class="key-chip">Neovim</span>
+        </div>
+
+        <div class="gsap-fade-up flex flex-col flex-wrap gap-4 sm:flex-row">
+          <a href="#experience" class="inline-flex items-center justify-center gap-2 rounded-md bg-[var(--accent)] px-6 py-3 font-mono text-sm font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[var(--accent-hover)] hover:shadow-[0_10px_30px_rgba(220,38,38,0.22)]">
+            :Experience
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center justify-center rounded-md border border-[var(--border)] bg-[color-mix(in_srgb,var(--bg-surface)_72%,transparent)] px-6 py-3 font-mono text-sm font-medium text-[var(--text)] transition-all duration-300 hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]">
+            :Contact
+          </a>
+        </div>
+      </div>
+
+      <aside class="editor-panel gsap-scale-in hidden overflow-hidden rounded-lg border border-[var(--border)] bg-[color-mix(in_srgb,var(--bg-surface)_86%,transparent)] font-mono shadow-2xl backdrop-blur md:block" aria-label="Developer status">
+        <div class="flex items-center justify-between border-b border-[var(--border)] bg-[var(--bg-elevated)] px-4 py-3 text-[0.72rem] text-[var(--text-muted)]">
+          <div class="flex items-center gap-2">
+            <span class="size-2.5 rounded-full bg-red-500"></span>
+            <span class="size-2.5 rounded-full bg-amber-500"></span>
+            <span class="size-2.5 rounded-full bg-emerald-500"></span>
+          </div>
+          <span>init.lua</span>
+        </div>
+        <div class="grid grid-cols-[2.5rem_1fr] text-[0.78rem] leading-7">
+          <div class="select-none border-r border-[var(--border)] py-4 text-right text-[var(--text-muted)]">
+            <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div>
+          </div>
+          <pre class="m-0 overflow-hidden p-4 text-[var(--text-secondary)]"><code><span class="text-[var(--accent)]">local</span> gopal = &#123;
+  role = <span class="text-[var(--accent-2)]">"software_dev"</span>,
+  editor = <span class="text-[var(--accent-2)]">"nvim"</span>,
+  stack = &#123; <span class="text-[var(--accent-2)]">"react"</span>, <span class="text-[var(--accent-2)]">"spring"</span> &#125;,
+  current = <span class="text-[var(--accent-2)]">"fanatics"</span>,
+  mode = <span class="text-[var(--accent-2)]">"ship_clean"</span>,
+&#125;
+
+<span class="text-[var(--accent)]">return</span> gopal</code></pre>
+        </div>
+        <div class="flex items-center justify-between border-t border-[var(--border)] bg-[var(--accent)] px-4 py-2 text-[0.7rem] text-white">
+          <span>NORMAL</span>
+          <span>j/k sections · gg top · G bottom</span>
+        </div>
+      </aside>
+    </div>
+
+    <div class="gsap-fade-in absolute inset-x-0 -bottom-8 h-px overflow-hidden" aria-hidden="true">
+      <div class="m-stripe stripe-inner h-full"></div>
+    </div>
+  </div>
+</section>
+
+<script>
+  function initHero() {
+    const grid = document.getElementById('hero-grid');
+    const hero = document.getElementById('hero');
+
+    if (grid && hero) {
+      hero.addEventListener('mousemove', (e) => {
+        const rect = hero.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+
+        grid.style.setProperty('--mouse-x', `${x}px`);
+        grid.style.setProperty('--mouse-y', `${y}px`);
+      });
+    }
+
+    const phrases = [
+      'build-web-ui --fast --accessible',
+      'open ~/.config/nvim/init.lua',
+      'ship backend flows without drama',
+      'git commit -m "make it cleaner"',
+    ];
+
+    const typedEl = document.getElementById('typed-text');
+    if (!typedEl) return;
+
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typeSpeed = 64;
+
+    function type() {
+      const currentPhrase = phrases[phraseIndex];
+
+      if (isDeleting) {
+        typedEl.textContent = currentPhrase.substring(0, charIndex - 1);
+        charIndex--;
+        typeSpeed = 28;
+      } else {
+        typedEl.textContent = currentPhrase.substring(0, charIndex + 1);
+        charIndex++;
+        typeSpeed = 64;
+      }
+
+      if (!isDeleting && charIndex === currentPhrase.length) {
+        typeSpeed = 1800;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 300;
+      }
+
+      setTimeout(type, typeSpeed);
+    }
+
+    setTimeout(type, 500);
+  }
+
+  document.addEventListener('astro:page-load', initHero);
+</script>
+
+<style>
+  .hero-grid-bg {
+    background-image:
+      linear-gradient(var(--border-subtle) 1px, transparent 1px),
+      linear-gradient(90deg, var(--border-subtle) 1px, transparent 1px);
+    background-size: 56px 56px;
+    mask-image: radial-gradient(circle 380px at var(--mouse-x, 35%) var(--mouse-y, 40%), black 0%, rgba(0, 0, 0, 0.24) 62%, transparent 100%);
+    -webkit-mask-image: radial-gradient(circle 380px at var(--mouse-x, 35%) var(--mouse-y, 40%), black 0%, rgba(0, 0, 0, 0.24) 62%, transparent 100%);
+  }
+
+  .hero-title {
+    letter-spacing: 0;
+  }
+
+  .status-dot {
+    width: 0.55rem;
+    height: 0.55rem;
+    border-radius: 999px;
+    background: #22c55e;
+    box-shadow: 0 0 0 4px color-mix(in srgb, #22c55e 14%, transparent);
+  }
+
+  .key-chip {
+    border: 1px solid var(--border);
+    border-radius: 0.35rem;
+    background: color-mix(in srgb, var(--bg-surface) 82%, transparent);
+    box-shadow: 0 2px 0 var(--border);
+    padding: 0.4rem 0.65rem;
+    transition: transform 0.2s ease, border-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .key-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    box-shadow: 0 1px 0 var(--accent);
+    transform: translateY(1px);
+  }
+
+  .editor-panel {
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.24);
+  }
+
+  .typed-cursor {
+    animation: blink 1s step-end infinite;
+  }
+
+  .stripe-inner {
+    width: 0%;
+    animation: stripeExpand 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s forwards;
+  }
+
+  @keyframes blink { 50% { opacity: 0; } }
+  @keyframes stripeExpand { to { width: 100%; } }
+</style>

@@ -1,0 +1,20 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="relative py-12 pb-8">
+  <div class="container">
+    <div class="m-stripe mb-8 h-0.5 rounded opacity-60" aria-hidden="true"></div>
+
+    <div class="flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <a href="/" class="mb-2 inline-block font-heading text-base font-extrabold uppercase tracking-[0.1em] text-[var(--text)]">
+          GOPAL<span class="font-light text-[var(--accent)]">KAUL</span>
+        </a>
+        <p class="text-[0.8rem] text-[var(--text-muted)]">Built with Astro, React & Tailwind</p>
+      </div>
+
+      <p class="font-mono text-xs tracking-[0.02em] text-[var(--text-muted)]">&copy; {year} Gopal Kaul. All rights reserved.</p>
+    </div>
+  </div>
+</footer>

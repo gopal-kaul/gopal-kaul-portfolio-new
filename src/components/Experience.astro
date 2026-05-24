@@ -1,0 +1,50 @@
+---
+import { experiences } from '../data/experience';
+---
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-label gsap-fade-up"><span>02 // Experience</span></div>
+    <h2 class="section-heading gsap-fade-up">Where I've worked<span class="text-[var(--accent)]">.</span></h2>
+
+    <div class="mt-8 flex flex-col gap-12">
+      {experiences.map((exp, i) => (
+        <div class="gsap-fade-up grid grid-cols-[2rem_1fr] gap-6 md:grid-cols-[3rem_1fr] md:gap-8" data-index={i}>
+          <div class="flex flex-col items-center pt-8">
+            <div class={`z-[1] size-3 shrink-0 rounded-full border-2 border-[var(--border)] bg-[var(--bg)] transition-colors ${exp.current ? 'border-[var(--accent)] bg-[var(--accent)] shadow-[0_0_12px_rgba(220,38,38,0.4)]' : ''}`}></div>
+            {i < experiences.length - 1 && <div class="mt-2 w-px flex-1 bg-[var(--border)]"></div>}
+          </div>
+
+          <div class={`relative mb-6 rounded-2xl border bg-[var(--bg-surface)] p-7 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-[var(--accent)] ${exp.current ? 'border-l-[3px] border-[var(--accent)]' : 'border-[var(--border)]'}`}>
+            <div class="mb-4 flex flex-wrap items-start justify-between gap-4">
+              <div>
+                <h3 class="text-[1.1rem] font-semibold tracking-[-0.01em] text-[var(--text)]">{exp.role}</h3>
+                <p class="mt-1 text-sm font-medium text-[var(--accent)]">{exp.company} <span class="font-normal text-[var(--text-muted)]">• {exp.location}</span></p>
+              </div>
+              <span class="whitespace-nowrap pt-1 font-mono text-xs tracking-[0.02em] text-[var(--text-muted)]">{exp.period}</span>
+            </div>
+
+            <ul class="mb-4 flex list-none flex-col gap-2">
+              {exp.description.map((desc) => (
+                <li class="text-sm leading-[1.6] text-[var(--text-secondary)]"><span class="mr-2 text-[var(--accent)]">▸</span>{desc}</li>
+              ))}
+            </ul>
+
+            <div class="flex flex-wrap gap-1.5">
+              {exp.tech.map((t) => (
+                <span class="tech-badge !px-2.5 !py-1 !text-[0.65rem]">{t}</span>
+              ))}
+            </div>
+
+            {exp.current && (
+              <div class="absolute right-4 top-[-0.5rem] flex items-center gap-1.5 rounded-full border border-[var(--accent)] bg-[var(--bg)] px-2.5 py-1 font-mono text-[0.65rem] uppercase tracking-[0.05em] text-[var(--accent)]">
+                <span class="size-1.5 animate-pulse rounded-full bg-[var(--accent)]"></span>
+                Current
+              </div>
+            )}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

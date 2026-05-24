@@ -1,0 +1,37 @@
+---
+title: "Hello World — Building My New Portfolio"
+description: "A look at the tech stack, design decisions, and what I learned rebuilding my portfolio from the ground up with Astro, React, and GSAP."
+pubDate: 2026-05-16
+tags: ["astro", "web-dev", "design"]
+draft: false
+---
+
+## Why Rebuild?
+
+My previous portfolio served me well, but it was time for something that better reflected where I am as a developer. I wanted a site that was:
+
+- **Fast** — near-zero JavaScript by default
+- **Modern** — smooth animations, dark mode, premium feel
+- **Minimal** — let the work speak, not the UI chrome
+
+## The Stack
+
+I went with **Astro 5** for its islands architecture — it ships zero JS by default and only hydrates the components that actually need interactivity. For animations, I chose **GSAP** over Framer Motion to avoid shipping the React runtime just for scroll effects.
+
+```javascript
+// GSAP in Astro — no hydration cost
+gsap.fromTo('.hero-title',
+  { y: 40, opacity: 0 },
+  { y: 0, opacity: 1, duration: 0.8, ease: 'power3.out' }
+);
+```
+
+The design takes inspiration from automotive brands like BMW M Division — sharp typography, generous whitespace, and a restrained color palette with strategic accent pops.
+
+## What's Next
+
+I'll be writing more about web performance, Linux workflows, and the occasional deep-dive into whatever I'm building. Stay tuned.
+
+---
+
+*Thanks for reading. If you want to chat about any of this, [hit me up](/contact).*

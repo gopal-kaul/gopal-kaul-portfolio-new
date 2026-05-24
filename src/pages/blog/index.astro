@@ -1,0 +1,56 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getCollection } from 'astro:content';
+import BlogList from '../../components/react/BlogList';
+
+const rawPosts = (await getCollection('blog', ({ data }) => !data.draft))
+  .sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+
+function formatDate(date: Date) {
+  return date.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric',
+  });
+}
+
+function estimateReadTime(body: string) {
+  const words = body.split(/\s+/).length;
+  return Math.max(1, Math.ceil(words / 200));
+}
+
+const formattedPosts = rawPosts.map((post) => ({
+  id: post.id,
+  title: post.data.title,
+  description: post.data.description,
+  pubDateStr: formatDate(post.data.pubDate),
+  tags: post.data.tags,
+  readTime: estimateReadTime(post.body || ''),
+  coverImage: post.data.coverImage?.src,
+}));
+---
+
+<BaseLayout title="Blog — Gopal Kaul" description="Thoughts on web development, Linux, and building things.">
+  <section class="section pt-32">
+    <div class="container">
+      <div class="mx-auto max-w-3xl">
+        <div class="mb-16 flex flex-col items-center text-center">
+          <a href="/" class="gsap-fade-up mb-8 inline-flex items-center gap-2 font-mono text-[0.8rem] text-[var(--text-muted)] transition-colors hover:text-[var(--accent)]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="19" y1="12" x2="5" y2="12"></line>
+              <polyline points="12 19 5 12 12 5"></polyline>
+            </svg>
+            Back home
+          </a>
+          <div class="section-label gsap-fade-up flex w-full justify-center"><span>// Blog</span></div>
+          <h1 class="section-heading gsap-fade-up w-full text-center">Writing & Thoughts<span class="text-[var(--accent)]">.</span></h1>
+          <p class="gsap-fade-up w-full max-w-[36rem] text-center text-[1.05rem] leading-[1.7] text-[var(--text-secondary)]">
+            Occasional posts about web development, tools I use, and things I find interesting.
+          </p>
+        </div>
+
+        <div class="gsap-fade-up"><BlogList client:load posts={formattedPosts} /></div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
